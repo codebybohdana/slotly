@@ -17,4 +17,7 @@ coverage/
 *.log
 
 # macOS
-.DS_StorePLAN.md
+.DS_Store
+
+# Local project planning
+PLAN.md
