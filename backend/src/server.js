@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
+const healthRoutes = require("./routes/health.routes");
+
 dotenv.config();
 
 const app = express();
@@ -9,9 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/health", (req, res) => {
-  res.json({ status: "ok" });
-});
+app.use("/health", healthRoutes);
 
 const PORT = process.env.PORT || 3000;
 
