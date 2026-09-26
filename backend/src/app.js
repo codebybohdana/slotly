@@ -1,7 +1,7 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
 
-const healthRoutes = require("./modules/health/health.routes");
+import healthRoutes from "./modules/health/health.routes.js";
 
 const app = express();
 
@@ -10,4 +10,4 @@ app.use(express.json());
 
 app.use("/health", healthRoutes);
 
-module.exports = app;
+export default app;
